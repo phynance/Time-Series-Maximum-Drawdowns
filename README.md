@@ -73,10 +73,10 @@ Step 2: For multiple drawdowns with the same start-date, only choose the drawdow
 The program output 2 graphs 
 
 Graph 1 shows all the MDDs found in the SPX. The starting and ending-dates of MDDS, included the duration, are annotated. The recovery dates are shown in the upper left corner. 
-<img src="https://github.com/phynance/maximum-drawdown/blob/master/Figure_1.png">
+<img src="https://github.com/phynance/Time-Series-Maximum-Drawdowns/blob/master/Figure_1.png">
 
 Graph 2 further indicates the corresponding MDD start and end dates on the plot of VIX time-series.
-<img src="https://github.com/phynance/maximum-drawdown/blob/master/Figure_2.png">
+<img src="https://github.com/phynance/Time-Series-Maximum-Drawdowns/blob/master/Figure_2.png">
 
 The details of the result are stored in the list 
 ```
