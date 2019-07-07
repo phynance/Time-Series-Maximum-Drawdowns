@@ -19,30 +19,7 @@ The python scripts are written for Python 3 only and requires the following modu
 ``` VIXdata = df['VIX'].values #####   delete this if you are testing other time-series ############# ```
 
 and the block of code
-```
-###############   delete this if you are testing other time-series ###############
-plt.figure(2)
-plt.plot(df.index, VIXdata)
-for row in range(len(secondfilter)):
-    start = secondfilter[row][2]
-    VIXstart = df.loc[start]['VIX']
-    end = secondfilter[row][4]
-    VIXend = df.loc[end]['VIX']
-    delta = (VIXend-VIXstart)
-    VIXfiltered.append([start, VIXstart,end, VIXend, delta])
-    duration = (end - start).days
-    plt.plot([start, end], [VIXstart, VIXend], 'ro--')
-    MDDyear, MDDmonth, MDDdate = str(start.year),  str(start.month), str(start.day)
-    DDendYear, DDendMonth, DDendDate = str(end.year), str(end.month), str(end.day)
-    #height_MDD = (-1)**(row)*(20 + (row%3)*5)
-    height_MDD = (20 + (row%3)*10)
-    plt.annotate( '%s-%s-%s \n  %s-%s-%s \n %d DD days \n (%.2f %%)' % (MDDyear,MDDmonth,MDDdate, DDendYear,DDendMonth,DDendDate,duration, delta), 
-             xy=(start, VIXstart), xytext=(start, VIXstart+height_MDD),color='black', arrowprops=dict(facecolor='red', alpha=0.3),)
-             
-plt.title('Change of VIX during SPX MDD > %s %% between 1990 and 2018' % MDD )
 
-###############   delete this if you are testing other time-series ###############
-```
 should be commented or deleted. 
 
 2. The python script `SPX_VIX_simplified.py` contains the algorithm to find the MMDs happened all over these 28 years. In the script, the user may need to change the values of parameters in the section "Input Parameters".
@@ -78,7 +55,4 @@ Graph 1 shows all the MDDs found in the SPX. The starting and ending-dates of MD
 Graph 2 further indicates the corresponding MDD start and end dates on the plot of VIX time-series.
 <img src="https://github.com/phynance/Time-Series-Maximum-Drawdowns/blob/master/Figure_2.png">
 
-The details of the result are stored in the list 
-```
-secondfilter
-```
+
