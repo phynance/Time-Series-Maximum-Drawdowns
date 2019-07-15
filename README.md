@@ -11,7 +11,7 @@ The python scripts are written for Python 3 only and requires the following modu
 
 
 ### Clone this repo
-`$ git clone https://github.com/phynance/maximum-drawdown/`
+`$ git clone https://github.com/phynance/Time-Series-Maximum-Drawdowns/`
 
 ## How to use?
 1. The file `SPXVIXInput90to18.csv` contains the daily data of SPX and its volatility index VIX from 1990 to 2018. Open the CSV file `SPXVIXInput90to18.csv` and change the time-series to that you want to study. Or you can just keep using this SPX and VIX data given. If you are testing other time-series, the line 
